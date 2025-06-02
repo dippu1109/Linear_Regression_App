@@ -67,6 +67,6 @@ if x and y and len(x) > 1:
     # Prediction
     st.subheader("🔮 Predict")
     new_x = st.number_input("Enter new X value to predict Y")
-    if new_x:
+    if new_x is not None:
         predicted_y = model.predict([new_x])[0]
         st.success(f"Predicted Y value: `{predicted_y:.2f}`")
