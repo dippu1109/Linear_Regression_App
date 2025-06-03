@@ -46,7 +46,7 @@ elif input_mode == "📝 Manual Entry":
         y.append(y_val)
 
 # --- MODEL & VISUALIZATION ---
-if x and y and len(x) > 1:
+if x is not None and y is not None and len(x) > 1:
     model.fit(x, y)
     y_pred = model.predict(x)
 
